@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+    // Associative Array Initialization
+    
+    var javascriptDictionary = {
+    
+        'Assyria' : 'Nineveh',
+        'Babylonia' : 'Babylon',
+        'Sumeria' : 'Ur',
+        'Persia' : 'Susa'
+      };
+      
+    document.write("Initialization is completed <br\>");
+    for(var key in javascriptDictionary) {
+        
+        foo(key, javascriptDictionary[key]);
+            
+    }
+    
+    // Getting a value
+    
+    document.write("<br\>");
+    document.write("Getting the value of 'Sumeria': <br\>");
+    var value1 = javascriptDictionary['Sumeria'];
+    document.write("The value of Sumeria is: ", value1, "<br\>");
+    document.write("<br\>");
+    
+    // Adding an element
+    
+    document.write("Adding a new element 'Egypt': <br\>");
+    javascriptDictionary['Egypt'] = "Thebes";
+    for(var key in javascriptDictionary) {
+        
+        foo(key, javascriptDictionary[key]);
+            
+    }
+    document.write("<br\>");
+    
+    // Removing an element
+    
+    document.write("Removing the element 'Persia' <br\>");
+    delete javascriptDictionary['Persia'];
+    document.write("'Persia' is successfully removed. <br\>");
+    for(var key in javascriptDictionary) {
+        
+        foo(key, javascriptDictionary[key]);
+            
+    }
+    document.write("<br\>");
+    
+    // Modify an element
+    
+    document.write("Modifying the element 'Assyria': <br\>");
+    javascriptDictionary['Assyria'] = 'Assur';
+    for(var key in javascriptDictionary) {
+        
+            foo(key, javascriptDictionary[key]);
+            
+    }
+    document.write("<br\>");
+    
+    // Searching for the existence of a key
+    
+    document.write("Searching for the 'Babylonia' key: <br\>");
+    if (javascriptDictionary.hasOwnProperty("Babylonia")) {
+    
+        var matchingValue = javascriptDictionary['Babylonia'];
+        document.write("The key is successfully found with the value " , matchingValue, "<br\>");
+    }
+    else {
+        
+        document.write("Key was not found. <br\>");
+    }
+    
+    document.write("Searching for the 'Rome' key: <br\>");
+    if (javascriptDictionary.hasOwnProperty("Rome")) {
+    
+        var matchingValue = javascriptDictionary['Rome'];
+        document.write("The key is successfully found with the value " , matchingValue, "<br\>");
+    }
+    else {
+        
+        document.write("Key was not found. <br\>");
+    }
+    
+    // Searching for the existence of a value
+    
+    document.write("<br\>");
+    document.write("Searching for the 'Thebes' value: <br\>");
+    
+    foundThebes = false;
+    for (var key in javascriptDictionary) {
+    
+        if (javascriptDictionary[key] == 'Thebes') {
+            foundThebes = true;
+            break;
+         }
+    }
+    
+    if (foundThebes) {
+    
+        document.write("'Thebes' is successfully found as a value. <br\>");
+    }
+    else {
+        document.write("'Thebes' was not found as a value. <br\>");
+    }
+    
+    // Case when the value is not present
+    
+    document.write("Searching for the 'Athens' value: <br\>");
+    
+    foundAthens = false;
+    for (var key in javascriptDictionary) {
+    
+        if (javascriptDictionary[key] == 'Athens') {
+            foundAthens = true;
+            break;
+         }
+    }
+    
+    if (foundAthens) {
+    
+        document.write("'Athens' is successfully found as a value. <br\>");
+    }
+    else {
+        document.write("'Athens' was not found as a value. <br\>");
+    }
+    
+    // Function declaration and printing key-value pair
+    
+    document.write("<br\> Looping through the array: <br\>");
+    function foo(key, value) {
+    
+        document.write(key, ": ", value, "<br\>");
+    }
+    
+    for(var key in javascriptDictionary) {
+        
+        foo(key, javascriptDictionary[key]);
+            
+    }
+    
+    </script>
+</body>
+</html>
+    
+    

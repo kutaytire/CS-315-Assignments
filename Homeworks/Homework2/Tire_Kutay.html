@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+document.write("Testing Conditional Exit<br>");
+
+for(let i = 0; i < 5; i++) {
+
+	document.write("<br>The value of i is: ", i,);
+
+}
+
+document.write("<br>");
+document.write("<br>Testing Unconditional Exit<br>");
+
+for(let i = 0; i < 6; i++) {
+
+	document.write("<br> The value of i is: ", i);
+    
+    if (i == 3){
+    	break;
+    }
+}
+
+document.write("<br>");
+document.write("<br>Testing Labeled Exit<br>");
+
+let index = 0;
+
+outerLoop: 
+	while(index < 6) {
+    
+    	document.write("<br>The value of the index is: ", index);
+    	
+        innerLoop:
+        
+        	for(let i = 0; i <= 5; i++) {
+            
+            	if(i == 3) {
+                
+                	break innerLoop;
+                }
+            
+            	if(index == 3){
+                
+                	break outerLoop;
+                }
+            
+            	document.write("<br>The value of i inside the inner loop is: ", i);
+                
+                
+                
+            }
+            
+       index++;
+	}
+   
+document.write("<br>");
+document.write("<br>Testing Unlabeled Exit<br>");
+
+let index2 = 0;
+
+while(index2 < 7) {
+
+	document.write("<br>The value of index2 is: ", index2);
+    
+    if(index2 == 3) {
+    	break;
+    }
+    
+    index2++;
+}
+
+document.write("<br>");
+document.write("<br>Testing Unlabeled Continue<br>");
+
+let a = 0;
+
+while(a < 4) {
+
+	document.write("<br>The value of a is: ", a);
+    a++;
+    
+    continue
+    
+    document.write("This statement is skipped.");
+}
+
+document.write("<br>");
+document.write("Testing Labeled Continue<br>");
+outerLoop2: 
+  
+    for (let k = 0; k < 3; k++) {
+      
+    	document.write("<br>The value of k in outerloop: ", k, "<br>");
+    
+  
+    innerLoop2:
+  
+      for (let i = 0; i < 5; i++) {
+        
+        if(k == 1) {
+          
+          document.write("<br>This will automatically skip to k = 2<br>");
+          continue outerLoop2;
+        }
+        
+        if(i == 3) {
+   
+          continue innerLoop2;
+        }
+        document.write("<br>The value of i in innerloop:" , i);
+        
+      }
+  
+    }
+	
+    
+
+
+</script> 
+
+</body>
+</html>
+
