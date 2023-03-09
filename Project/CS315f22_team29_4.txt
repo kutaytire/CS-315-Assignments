@@ -1,0 +1,103 @@
+go() {
+
+	# Switch has an index that is out of bounds #
+	
+	# variable declarations #
+
+	num1 := 5
+	num2 := 3.1
+	floatval := -.7
+	check := FALSE
+	str := "Hello World"
+	str2 := input()
+
+	# constant declarations #
+
+	constant num3 := 4 + 5
+	constant num4 := 6.5
+	constant check2 := TRUE
+
+	# assignment statements #
+
+	res1 := 5 + 6 * 7
+	res2 := check1 && num1 >= num4
+	res3 := num2 * num3
+	urlStr := "https://www.w3schools.com/html/html_links.asp"
+	data1 := temperature() - 5
+	data2 := soundLevel()
+	data3 := airPressure()
+	data4 := airQuality()
+	data5 := light()
+	data6 := humidity() * 2
+	check3 := timeStamp() % 60
+
+	data7 := recieveIntegerValue(defineConnectionToURL(urlStr))
+	data8 := recieveIntegerValue(defineConnectionToURL("https://www.w3schools.com/html/html_links.asp"))
+
+	i := 0
+
+	# loops #
+
+	while (i < num3 ) {
+		print( "The value of i: " , i)
+		i := i + 1
+	}
+	
+	for (i: (6)) {
+		print(i)
+	}
+
+	for (i: (2, 6)) {
+		print(i)
+	}
+
+	for (i: (2, 8, 2)) {	
+		print(i)
+	}
+
+	# Conditional Statements #
+
+	if (temperature() >= 25) {
+		print("Too hot")
+		res4 := humidity() > light() || airPressure() > light()
+	} else {	
+		print("It is OK")
+	}
+
+	if (TRUE && !FALSE) {
+		inside := TRUE
+	} else {
+		if ( 3 % 2 != 1) {
+			print("Not entered")
+		}
+	}
+	
+	# function declaration #
+
+	function dummy (x){
+		x := x % 5
+  		return x 
+	}
+
+	function dumm2 (a,b,c){
+		a := b + c
+		return a - 1 
+	}
+
+	# some IoT functions #
+
+	done1 := sendIntegerValue(defineConnectionToURL(urlStr), 5)
+	done2 := switchOn(12)
+	done3 := switchOff(4)
+
+	# output statement #
+
+	print(num1)
+	print(num1 == num2)
+
+	# function call #
+
+	arg := 42
+	modulo5 := dummy(arg)
+	val := dummy2(num1, num2, num3)
+}
